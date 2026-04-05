@@ -4,43 +4,30 @@
 	import Card from '$lib/components/Card.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
-	import logo from '$lib/images/logo.png';
-	import slide1 from '$lib/images/slide-1.png';
-	import slide2 from '$lib/images/slide-2.png';
-	import slide3 from '$lib/images/slide-3.png';
-	import vk from '$lib/images/vk.png';
-	import telegram from '$lib/images/telegram.png';
-	import dontSpeak from '$lib/images/dont-speak.png';
-	import alignPro from '$lib/images/align-pro.png';
-	import drAgen from '$lib/images/dr-agen.png';
-	import oneCoffee from '$lib/images/one-coffee.png';
-	import oneProduct from '$lib/images/one-product.png';
-	import oneParfum from '$lib/images/one-parfum.png';
-
 	const brands = [
-		{ image: dontSpeak, alt: "Don't Speak School", href: '#' },
-		{ image: alignPro, alt: 'Align Pro Group', href: '#' },
-		{ image: drAgen, alt: "Dr. A'Gen", href: '#' },
-		{ image: oneCoffee, alt: 'One Coffee', href: '#' },
-		{ image: oneProduct, alt: 'One Product', href: '#' },
-		{ image: oneParfum, alt: 'One Parfum', href: '#' },
+		{ image: 'images/dont-speak.png', alt: "Don't Speak School", href: '#' },
+		{ image: 'images/align-pro.png', alt: 'Align Pro Group', href: '#' },
+		{ image: 'images/dr-agen.png', alt: "Dr. A'Gen", href: '#' },
+		{ image: 'images/one-coffee.png', alt: 'One Coffee', href: '#' },
+		{ image: 'images/one-product.png', alt: 'One Product', href: '#' },
+		{ image: 'images/one-parfum.png', alt: 'One Parfum', href: '#' },
 	];
 
 	const slides = [
 		{
-			image: slide1,
+			image: 'images/slide-1.png',
 			title: 'Скоро!',
 			description:
 				'Готовьте свои костюмы!<br>Совсем скоро нас ждет встреча, на которой мы обсудим все важные вопросы, увидим новинки и запланируем какие-то крутые штуки!'
 		},
 		{
-			image: slide2,
+			image: 'images/slide-2.png',
 			title: 'Скоро!',
 			description:
 				'Готовьте свои костюмы!<br>Совсем скоро нас ждет встреча, увидим новинки и запланируем какие-то крутые штуки!'
 		},
 		{
-			image: slide3,
+			image: 'images/slide-3.png',
 			title: 'Скоро!',
 			description:
 				'Готовьте свои костюмы!<br>Совсем скоро нас ждет встреча, на которой мы обсудим все важные вопросы, увидим новинки и запланируем какие-то крутые штуки!'
@@ -51,7 +38,7 @@
 <div class="bg-brand-dark">
 	<Header />
 	<div class="conteiner-custom flex flex-col items-center gap-15 py-44">
-		<img src={logo} alt="ONE TO ONE" />
+		<img src="images/logo.png" alt="ONE TO ONE" />
 		<h2 class="text-center font-title-light text-xl text-white">
 			Живи для себя, создавай для других
 		</h2>
@@ -66,8 +53,8 @@
 				class="flex h-[330px] w-full shrink-0 flex-col gap-4 rounded-[20px] bg-brand-gray-light p-3 lg:w-[491px]"
 			>
 				<div class="flex h-[120px] gap-3">
-					<Card image={vk} alt="VK Видео" href="#" size="sm" />
-					<Card image={telegram} alt="Телеграм" href="#" size="sm" />
+					<Card image="images/vk.png" alt="VK Видео" href="#" size="sm" />
+					<Card image="images/telegram.png" alt="Телеграм" href="#" size="sm" />
 				</div>
 
 				<div class="p-6 text-brand-gray-dark">

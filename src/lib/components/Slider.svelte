@@ -1,11 +1,10 @@
 <script lang="ts">
-	import { onDestroy } from 'svelte';
-	import arrow from '$lib/icons/arrow.svg';
+	import { onMount } from 'svelte';
 
 	let currentIndex = $state(0);
 	let { slides = [] } = $props();
 
-	let interval: ReturnType<typeof setInterval>;
+	let interval: ReturnType<typeof setInterval> | undefined;
 
 	function startInterval() {
 		interval = setInterval(() => {
@@ -19,8 +18,10 @@
 		startInterval();
 	}
 
-	startInterval();
-	onDestroy(() => clearInterval(interval));
+	onMount(() => {
+		startInterval();
+		return () => clearInterval(interval);
+	});
 
 </script>
 
@@ -35,7 +36,7 @@
 
 			<div class="absolute right-1 -bottom-8 -translate-x-1/2 transform">
 				<button class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-light shadow-lg transition-all duration-300 hover:bg-blue-400">
-					<img class="block" src={arrow} alt="" />
+					<img class="block" src="icons/arrow.svg" alt="" />
 				</button>
 			</div>
 		</div>
