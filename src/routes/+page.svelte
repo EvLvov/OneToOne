@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Header from '$lib/components/Header.svelte';
 	import Slider from '$lib/components/Slider.svelte';
 	import Card from '$lib/components/Card.svelte';
@@ -50,9 +50,9 @@
 			</div>
 
 			<div
-				class="flex h-[330px] w-full shrink-0 flex-col gap-4 rounded-[20px] bg-brand-gray-light p-3 lg:w-[491px]"
+				class="flex h-auto lg:h-[330px] w-full shrink-0 flex-col gap-4 rounded-[20px] bg-brand-gray-light p-3 lg:w-[491px]"
 			>
-				<div class="flex h-[120px] gap-3">
+				<div class="flex gap-3">
 					<Card image="images/vk.png" alt="VK Видео" href="#" size="sm" />
 					<Card image="images/telegram.png" alt="Телеграм" href="#" size="sm" />
 				</div>

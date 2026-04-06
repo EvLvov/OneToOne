@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Input from './Input.svelte';
   
   let id = $state('');
