@@ -37,14 +37,14 @@
 
 <div class="bg-brand-dark">
 	<Header />
-	<div class="conteiner-custom flex flex-col items-center gap-15 py-44">
+	<div class="conteiner-custom flex flex-col items-center gap-[3.75rem] py-32 md:py-44">
 		<img src="images/logo.png" alt="ONE TO ONE" />
 		<h2 class="text-center font-title-light text-xl text-white">
 			Живи для себя, создавай для других
 		</h2>
 	</div>
 	<section class="bg-white lg:rounded-[60px]">
-		<div class="conteiner-custom flex flex-col gap-[30px] py-20 lg:flex-row">
+		<div class="conteiner-custom flex flex-col gap-[30px] py-14 md:py-20 lg:flex-row">
 			<div class="min-w-0 flex-1">
 				<Slider {slides} />
 			</div>
@@ -59,7 +59,7 @@
 
 				<div class="p-6 text-brand-gray-dark">
 					<h2 class="mb-3 text-xl font-title-medium lg:pl-4">Присоединяйтесь</h2>
-					<div class="font-body-light lg:pl-22">
+					<div class="font-body-light lg:pl-[5.5rem]">
 						<p class="text-sm leading-relaxed">
 							Вступайте в наши социальные сети,<br> чтобы
 							<mark class="rounded bg-brand-accent p-0.5 font-body-medium"
@@ -75,7 +75,7 @@
 		</div>
 	</section>
 	<section class="bg-brand-gray-light lg:rounded-[60px]">
-		<div class="conteiner-custom py-20">
+		<div class="conteiner-custom py-14 md:py-20">
 			<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
 				{#each brands as brand}
 					<div class="flex justify-center">

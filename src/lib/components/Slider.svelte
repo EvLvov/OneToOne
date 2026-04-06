@@ -4,7 +4,7 @@
 	let currentIndex = $state(0);
 	let { slides = [] } = $props();
 
-	let interval;
+	let interval: ReturnType<typeof setInterval> | undefined;
 
 	function startInterval() {
 		interval = setInterval(() => {
@@ -12,7 +12,7 @@
 		}, 5000);
 	}
 
-	function goToSlide(index) {
+	function goToSlide(index: number) {
 		currentIndex = index;
 		clearInterval(interval);
 		startInterval();
