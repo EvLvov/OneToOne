@@ -1,6 +1,6 @@
-@import 'tailwindcss';
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: 'gorgita-regular';
@@ -34,36 +34,11 @@
   font-display: swap;
 }
 
-
-@theme {
-    --color-brand-dark: #1D223B;
-    --color-brand-dark-soft: #202851;
-    --color-brand-mid: #2C376D;
-    --color-brand-light: #4280D2;
-    --color-brand-accent: #C6DAF4;
-    --color-brand-gray-light: #E9E9E9;
-    --color-brand-gray-dark: #222222;
-
-    --font-title-light: 'unbounded-light';
-    --font-title-medium: 'unbounded-medium';
-    --font-body-light: 'gorgita-regular';
-    --font-body-medium: 'gorgita-medium';
-
-    --text-xs: 0.625rem;      /* 10px */
-    --text-xs--line-height: 0.875rem;    
-    --text-sm: 0.75rem;        /* 12px */
-    --text-sm--line-height: 1rem;
-    --text-base: 0.875rem;     /* 14px */
-    --text-base--line-height: 1.25rem;
-    --text-xl: 1.5rem;         /* 24px */
-    --text-xl--line-height: 2rem;
-    --text-xxl: 2.125rem;         /* 34px */
-    --text-xxl--line-height: 2.5rem; 
-}
-
-.conteiner-custom {
+@layer components {
+  .conteiner-custom {
     max-width: 1220px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
+  }
 }
