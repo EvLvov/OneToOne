@@ -2,19 +2,13 @@
   let idCounter = 0;
 </script>
 
-<script lang="ts">
+<script>
   let {
     type = 'text',
     placeholder = '',
     value = $bindable(),
     label = '',
     size = 'normal'
-  }: {
-    type?: string;
-    placeholder?: string;
-    value?: string;
-    label?: string;
-    size?: 'normal' | 'small';
   } = $props();
 
   const sizeClasses = {

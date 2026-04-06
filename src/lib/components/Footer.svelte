@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	const links = [
 		{ label: 'Пользовательское соглашение', href: '#' },
 		{ label: 'Соглашение о персональных данных', href: '#' },

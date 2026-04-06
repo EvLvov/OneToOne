@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import Header from '$lib/components/Header.svelte';
 	import Slider from '$lib/components/Slider.svelte';
 	import Card from '$lib/components/Card.svelte';

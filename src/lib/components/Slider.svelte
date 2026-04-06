@@ -1,10 +1,10 @@
-<script lang="ts">
+<script>
 	import { onMount } from 'svelte';
 
 	let currentIndex = $state(0);
 	let { slides = [] } = $props();
 
-	let interval: ReturnType<typeof setInterval> | undefined;
+	let interval;
 
 	function startInterval() {
 		interval = setInterval(() => {
@@ -12,7 +12,7 @@
 		}, 5000);
 	}
 
-	function goToSlide(index: number) {
+	function goToSlide(index) {
 		currentIndex = index;
 		clearInterval(interval);
 		startInterval();
