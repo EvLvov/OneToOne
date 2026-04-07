@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Button from './Button.svelte';
 
 	let currentIndex = $state(0);
 	let { slides = [] } = $props();
@@ -9,7 +10,7 @@
 	function startInterval() {
 		interval = setInterval(() => {
 			currentIndex = (currentIndex + 1) % slides.length;
-		}, 5000);
+		}, 6000);
 	}
 
 	function goToSlide(index: number) {
@@ -35,16 +36,13 @@
 			<p class="ml-5 font-body-light text-sm">{@html slides[currentIndex]?.description}</p>
 
 			<div class="absolute right-1 -bottom-8 -translate-x-1/2 transform">
-				<button class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-light shadow-lg transition-all duration-300 hover:bg-blue-400">
-					<img class="block" src="icons/arrow.svg" alt="" />
-				</button>
+				<Button variant="icon" src="icons/arrow.svg" />
 			</div>
 		</div>
 	</div>
 
 	{#if slides.length > 1}
 		<div class="absolute bottom-2 left-2 z-20">
-			<!-- Белая подложка -->
 			<div class="rounded-full bg-white px-2 py-2 backdrop-blur-sm">
 				<div class="flex gap-2">
 					{#each slides as _, index}

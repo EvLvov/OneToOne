@@ -29,7 +29,7 @@
 						{/each}
 					</nav>
 
-					<address class="font-body-light text-xs leading-relaxed text-white/80 not-italic text-center lg:text-left">
+					<address class="font-body-light text-xs leading-relaxed text-white not-italic text-center lg:text-left">
 						<p class="font-body-medium text-white">ООО "КРИСТЕЛ"</p>
 						<p>ИНН: 2460096023</p>
 						<p>ОГРН: 1162468072491</p>
@@ -45,4 +45,4 @@
 		
 	</footer>
 </div>
-<p class="py-2 text-center font-body-light text-xs text-white/40">Copyright ©2025</p>
+<p class="py-2 text-center font-body-light text-xs text-brand-light">Copyright ©2025</p>

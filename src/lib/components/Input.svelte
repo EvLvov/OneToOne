@@ -1,17 +1,25 @@
-<script module>
+<script module lang="ts">
   let idCounter = 0;
 </script>
 
-<script>
+<script lang="ts">
   let {
     type = 'text',
     placeholder = '',
     value = $bindable(),
     label = '',
-    size = 'normal'
+    size = 'normal',
+    class: extraClass = ''
+  }: {
+    type?: string;
+    placeholder?: string;
+    value?: string;
+    label?: string;
+    size?: 'normal' | 'small';
+    class?: string;
   } = $props();
 
-  const sizeClasses = {
+  const sizeClasses: Record<string, string> = {
     normal: '',
     small: 'w-[130px] rounded-[90px] bg-brand-mid font-body-light text-white placeholder:text-white/50 px-3 py-2 text-sm outline-none border border-transparent focus:brand-light'
   };
@@ -29,6 +37,6 @@
     {type}
     {placeholder}
     bind:value
-    class={currentSizeClass}
+    class="{currentSizeClass} {extraClass}"
   />
 </div>

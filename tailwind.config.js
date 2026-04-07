@@ -19,11 +19,11 @@ export default {
 				'body-medium': ['gorgita-medium', 'sans-serif'],
 			},
 			fontSize: {
-				'xs':   ['0.625rem', { lineHeight: '0.875rem' }],
-				'sm':   ['0.75rem',  { lineHeight: '1rem' }],
-				'base': ['0.875rem', { lineHeight: '1.25rem' }],
-				'xl':   ['1.5rem',   { lineHeight: '2rem' }],
-				'xxl':  ['2.125rem', { lineHeight: '2.5rem' }],
+				'xs':   ['0.625rem', { lineHeight: '0.875rem' }], // 10px
+				'sm':   ['0.75rem',  { lineHeight: '1rem' }],     // 12px
+				'base': ['0.875rem', { lineHeight: '1.25rem' }],  // 14px
+				'xl':   ['1.5rem',   { lineHeight: '2rem' }],     // 24px
+				'xxl':  ['2.125rem', { lineHeight: '2.5rem' }],   // 34px
 			},
 		},
 	},
