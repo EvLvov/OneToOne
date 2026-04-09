@@ -12,7 +12,7 @@
 	let measured = $state(false);
 
 	function measure() {
-		const allLogos = [...document.querySelectorAll('img[src="images/logo.png"]')] as HTMLImageElement[];
+		const allLogos = [...document.querySelectorAll('img[src="images/main/logo.png"]')] as HTMLImageElement[];
 		const pageLogo = allLogos.find(img => !img.closest('[data-preloader]'));
 		if (!pageLogo) return;
 		const rect = pageLogo.getBoundingClientRect();
@@ -32,7 +32,7 @@
 	}
 
 	onMount(() => {
-		const allLogos = [...document.querySelectorAll('img[src="images/logo.png"]')] as HTMLImageElement[];
+		const allLogos = [...document.querySelectorAll('img[src="images/main/logo.png"]')] as HTMLImageElement[];
 		const pageLogo = allLogos.find(img => !img.closest('[data-preloader]'));
 
 		if (pageLogo?.complete) {
@@ -51,7 +51,7 @@
 	<div data-preloader class="fixed inset-0 z-[9999] bg-brand-dark transition-opacity duration-[600ms] {hiding ? 'opacity-0' : 'opacity-100'}">
 
 		<img
-			src="images/logo.png"
+			src="images/main/logo.png"
 			alt="ONE TO ONE"
 			style="position: fixed; top: {logoTop}px; left: {logoLeft}px; width: {logoWidth}px; height: {logoHeight}px;"
 			class="transition-opacity duration-[700ms] {measured ? 'opacity-100' : 'opacity-0'}"

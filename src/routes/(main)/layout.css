@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'gorgita-regular';
-  src: url('/fonts/gordita-regular.woff2') format('woff2');
+  src: url('/fonts/main/gordita-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'gorgita-medium';
-  src: url('/fonts/gordita-medium.woff2') format('woff2');
+  src: url('/fonts/main/gordita-medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: 'unbounded-light';
-  src: url('/fonts/unbounded-light.woff2') format('woff2');
+  src: url('/fonts/main/unbounded-light.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'unbounded-medium';
-  src: url('/fonts/unbounded-medium.woff2') format('woff2');
+  src: url('/fonts/main/unbounded-medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

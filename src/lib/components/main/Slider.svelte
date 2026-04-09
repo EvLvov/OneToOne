@@ -23,7 +23,6 @@
 		startInterval();
 		return () => clearInterval(interval);
 	});
-
 </script>
 
 <div class="relative w-full overflow-hidden rounded-[20px] h-[330px]">
@@ -35,9 +34,9 @@
 			<h3 class="mb-3 font-title-medium text-xxl">{slides[currentIndex]?.title}</h3>
 			<p class="ml-5 font-body-light text-sm">{@html slides[currentIndex]?.description}</p>
 
-			<div class="absolute right-1 -bottom-8 -translate-x-1/2 transform">
+			<!-- <div class="absolute right-1 -bottom-8 -translate-x-1/2 transform">
 				<Button variant="icon" src="icons/arrow.svg" />
-			</div>
+			</div> -->
 		</div>
 	</div>
 

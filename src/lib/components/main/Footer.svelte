@@ -14,7 +14,7 @@
 			<div class="flex flex-col items-center gap-6 lg:flex-row lg:items-start">
 
 				<div class="flex w-full justify-center lg:w-1/2 lg:justify-start">
-					<img src="images/logo.png" alt="ONE TO ONE" class="h-auto w-full max-w-[486px] object-contain" />
+					<img src="images/main/logo.png" alt="ONE TO ONE" class="h-auto w-full max-w-[486px] object-contain" />
 				</div>
 
 				<div class="flex w-full flex-col items-center gap-8 lg:w-1/2 lg:flex-row lg:items-start lg:justify-between">

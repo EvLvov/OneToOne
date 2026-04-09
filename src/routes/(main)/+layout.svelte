@@ -1,6 +1,6 @@
 <script lang="ts">
 	import './layout.css';
-	import Preloader from '$lib/components/Preloader.svelte';
+	import Preloader from '$lib/components/main/Preloader.svelte';
 
 	let { children } = $props();
 </script>
