@@ -3,9 +3,12 @@
 	import Button from '$lib/components/landing/Button.svelte';
 	import ProductSlider from '$lib/components/landing/ProductSlider.svelte';
 	import Footer from '$lib/components/landing/Footer.svelte';
+	import Preloader from '$lib/components/landing/Preloader.svelte';
 </script>
 
-<div class="lg:h-[700px] bg-cover bg-no-repeat [background-position:calc(50%+300px)_center] lg:bg-left" style="background-image: url('images/landing/hero-bg.jpg')">
+<Preloader />
+
+<section class="lg:h-[700px] bg-cover bg-no-repeat [background-position:calc(50%+300px)_center] lg:bg-left" style="background-image: url('images/landing/hero-bg.jpg')">
 	<div class="container-landing">
 		<Header />
 		<div class="py-[100px] pt-[50px] lg:py-[60px] max-w-[849px] mx-auto 2xl:mx-0 2xl:max-w-none">
@@ -15,12 +18,12 @@
 			<Button label="Присоединиться" href="#" />
 		</div>
 	</div>
-</div>
+</section>
 
 <section class=" min-h-[940px] bg-cover bg-no-repeat overflow-hidden [background-position:-1550px_center] sm:[background-position:-1400px_center]  md:[background-position:-1100px_center] lg:[background-position:-600px_center] xl:bg-center" style="background-image: url('images/landing/parfume-bg.jpg')">
 
 	<div class=" relative container-landing flex flex-col items-center pt-[80px] pb-[80px] lg:pb-[0px] ">
-		<img src="images/landing/parfume-label.png" alt="" class="h-auto mb-[40px]" />
+		<img src="images/landing/parfume-label.png" alt="One Parfum" class="h-auto mb-[40px]" loading="lazy" />
 		<h2 class="mb-[30px] font-gordita font-light text-[40px] sm:text-[64px] text-center uppercase leading-[1.1]">Что такое <span class="font-normal leading-none"><br class="block md:hidden">One parfum</span>?</h2>
 		<p class="max-w-[750px] mb-[60px] font-gordita font-light text-[16px] leading-[130%] text-center">Ваш уникальный образ, личная история, которую мы рассказываем миру.<br class="hidden md:block"> <span class="font-normal">Духи дополняют нас</span>. Они помогают чувствовать себя теми, кем мы хотим быть:<br class="hidden md:block"> уверенными... яркими... неотразимыми.</p>
 
@@ -63,7 +66,7 @@
 <section class="min-h-[980px] bg-cover bg-no-repeat overflow-hidden [background-position:-600px_center] lg:[background-position:-500px_center] xl:bg-center" style="background-image: url('images/landing/parfume-home-bg.jpg')">
 	<div class="container-landing flex flex-col items-center py-[80px] text-white">
 
-		<img src="images/landing/parfume-label.png" alt="" class="h-auto mb-[40px]" />
+		<img src="images/landing/parfume-label.png" alt="One Parfum" class="h-auto mb-[40px]" loading="lazy" />
 		<h2 class="max-w-[968px] mb-[30px] font-gordita font-light text-[40px] sm:text-[56px] uppercase text-center leading-none hyphens-auto xs:hyphens-none" lang="ru">Премиальная коллекция <span class="text-[32px] sm:text-[40px] font-normal leading-none">парфюмированных диффузоров</span></h2>
 		<p class="max-w-[400px] lg:max-w-[750px] mb-[40px] sm:mb-[75px] font-gordita font-light text-[16px] leading-[130%] text-center">Погрузитесь в атмосферу роскоши и тонких ощущений с коллекцией One Parfum for Home!</p>
 		<h3 class="max-w-[600px] lg:max-w-[1200px] mb-[85px] font-gordita font-normal text-[30px] sm:text-[40px] text-center uppercase leading-[110%]">В чём уникальность <span class="font-light">One Parfum for Home?</span></h3>
@@ -113,7 +116,7 @@
 
 <section class="min-h-[1485px] bg-cover bg-no-repeat overflow-hidden [background-position:calc(100%+400px)_center] xl:bg-center" style="background-image: url('images/landing/pbc-bg.png')">
 	<div class="container-landing flex flex-col items-center py-[80px]">
-		<img src="images/landing/pbc-label.png" alt="" class="h-auto mb-[40px]" />
+		<img src="images/landing/pbc-label.png" alt="One PBC" class="h-auto mb-[40px]" loading="lazy" />
 		<h2 class="max-w-[800px] xl:max-w-[1200px] mb-[30px] font-gordita font-light text-[40px] sm:text-[64px] uppercase text-center leading-[1.1]">Линейка <span class="font-normal">Premium Body Care</span></h2>
 		<p class="max-w-[750px] mb-[60px] font-gordita font-light text-[16px] leading-[130%] text-center">Это не просто уход, а <span class="font-normal">новый уровень заботы о теле</span>, объединяющий эффективность профессиональной косметики и эстетическое удовольствие от использования</p>
 
@@ -146,7 +149,7 @@
 
 			<ProductSlider gap={50} btnOffset={-17}  btnColor="gray">
 				<div class="flex flex-col">
-					<img src="images/landing/pbc-1.png" alt="" class="max-w-[400px] mb-[34px] w-full mx-auto" />
+					<img src="images/landing/pbc-1.png" alt="Гель-парфюм PBC" class="max-w-[400px] mb-[34px] w-full mx-auto" loading="lazy" />
 					<div class="text-center font-gordita font-normal uppercase">
 						<p class="mb-[20px]  text-[18px]">Гель-парфюм</p>
 						<ul class="list-disc list-inside text-[#6C4016] text-[14px] leading-[180%]">
@@ -157,7 +160,7 @@
 					</div>
 				</div>
 				<div class="flex flex-col">
-					<img src="images/landing/pbc-2.png" alt="" class="max-w-[400px] mb-[34px] w-full mx-auto" />
+					<img src="images/landing/pbc-2.png" alt="Шампунь-гель 3 в 1 PBC" class="max-w-[400px] mb-[34px] w-full mx-auto" loading="lazy" />
 					<div class="text-center font-gordita font-normal uppercase">
 						<p class="mb-[20px] text-[18px]"><span class="font-light">Парфюмированный<br></span> шампунь-гель 3 в 1</p>
 						<ul class="list-disc list-inside text-[#6C4016] text-[14px] leading-[180%]">
@@ -167,7 +170,7 @@
 					</div>
 				</div>
 				<div class="flex flex-col">
-					<img src="images/landing/pbc-3.png" alt="" class="max-w-[400px] mb-[34px] w-full mx-auto" />
+					<img src="images/landing/pbc-3.png" alt="Жидкое мыло PBC" class="max-w-[400px] mb-[34px] w-full mx-auto" loading="lazy" />
 					<div class="text-center font-gordita font-normal uppercase">
 						<p class="mb-[20px] text-[18px]"><span class="font-light">Парфюмированное<br></span> жидкое мыло</p>
 						<ul class="list-disc list-inside text-[#6C4016] text-[14px] leading-[180%]">
@@ -177,7 +180,7 @@
 					</div>
 				</div>
 				<div class="flex flex-col">
-					<img src="images/landing/pbc-4.png" alt="" class="max-w-[400px] mb-[34px] w-full mx-auto" />
+					<img src="images/landing/pbc-4.png" alt="Антиперспирант с ионами серебра" class="max-w-[400px] mb-[34px] w-full mx-auto" loading="lazy" />
 					<div class="text-center font-gordita font-normal uppercase">
 						<p class="mb-[20px] text-[18px]">Антиперспирант<br><span class="font-light">с ионами серебра</span></p>
 						<ul class="list-disc list-inside text-[#6C4016] text-[14px] leading-[180%]">
@@ -196,7 +199,7 @@
 <section class="min-h-[2197px] bg-cover bg-no-repeat overflow-hidden [background-position:calc(100%+500px)_center] xl:bg-center" style="background-image: url('images/landing/coffee-bg.png')">
 	<div class="container-landing flex flex-col items-center py-[80px] text-white">
 
-		<img src="images/landing/coffee-label.png" alt="" class="h-auto mb-[40px]"/>
+		<img src="images/landing/coffee-label.png" alt="One Coffee" class="h-auto mb-[40px]" loading="lazy" />
 		<h2 class="max-w-[991px] mb-[30px] font-gordita font-light text-[40px] sm:text-[56px] uppercase text-center leading-[1.1]  sm:leading-[0.8]">ONE COFFEE:<br><span class="text-[40px]">собственное кофейное производство полного цикла</span></h2>
 		<p class="max-w-[895px] mb-[60px] font-gordita font-light text-[16px] leading-[130%] text-center">Наше производство охватывает весь процесс — от обжарки зерен до фасовки, с использованием передового оборудования из Швейцарии, Германии и Кореи. Мы сами разрабатываем уникальные рецептуры и создаём авторские бленды, чтобы предложить исключительный вкус и качество.</p>
 		<h3 class="max-w-[870px] mb-[60px] font-fira font-light text-[30px] sm:text-[40px] text-center text-[#EFBE93] uppercase leading-[1.1]">Свежеобжаренный натуральный молотый кофе <span class="font-gordita text-white">в дрип-пакетах</span></h3>
@@ -210,19 +213,19 @@
 					<div class="grid grid-cols-2 gap-x-[40px] gap-y-[20px] font-gordita font-light text-[16px]">
 						<div class="col-span-2 sm:col-span-1 flex gap-[16px]">
 							<img src="images/landing/check.png" alt="" class="shrink-0 self-start mt-[4px]" />
-							<p class="">Положительно воздействует на систему пищеварения, ускоряет обмен веществ</p>
+							<p>Положительно воздействует на систему пищеварения, ускоряет обмен веществ</p>
 						</div>
 						<div class="col-span-2 sm:col-span-1 flex gap-[16px]">
 							<img src="images/landing/check.png" alt="" class="shrink-0 self-start mt-[4px]" />
-							<p class="">Активизирует жиросжигающие процессы в организме и препятствует росту жировой ткани</p>
+							<p>Активизирует жиросжигающие процессы в организме и препятствует росту жировой ткани</p>
 						</div>
 						<div class="col-span-2 sm:col-span-1 flex gap-[16px]">
 							<img src="images/landing/check.png" alt="" class="shrink-0 self-start mt-[4px]" />
-							<p class="">Уменьшает аппетит и способствует снижению и контролю веса</p>
+							<p>Уменьшает аппетит и способствует снижению и контролю веса</p>
 						</div>
 						<div class="col-span-2 sm:col-span-1 flex gap-[16px]">
 							<img src="images/landing/check.png" alt="" class="shrink-0 self-start mt-[4px]" />
-							<p class="">Снижает все виды воспалительных процессов в организме, замедляя процесс старения</p>
+							<p>Снижает все виды воспалительных процессов в организме, замедляя процесс старения</p>
 						</div>
 					</div>
 				</div>
@@ -233,49 +236,49 @@
 				<div class="grid grid-cols-2 gap-x-[40px] gap-y-[20px] flex-1 content-between font-gordita font-light text-[16px]">
 					<div class="col-span-2 sm:col-span-1 flex gap-[16px]">
 						<img src="images/landing/check.png" alt="" class="shrink-0 self-start mt-[4px]" />
-						<p class="">Защищает клетки от повреждающего действия свободных радикалов — окислительного стресса и воспалени</p>
+						<p>Защищает клетки от повреждающего действия свободных радикалов — окислительного стресса и воспалени</p>
 					</div>
 					<div class="col-span-2 sm:col-span-1 flex gap-[16px]">
 						<img src="images/landing/check.png" alt="" class="shrink-0 self-start mt-[4px]" />
-						<p class="">Замедляет процесс старения, активирует белки «сиртуины», связанные с долголетием, и улучшает жизнеспособность клеток</p>
+						<p>Замедляет процесс старения, активирует белки «сиртуины», связанные с долголетием, и улучшает жизнеспособность клеток</p>
 					</div>
 					<div class="col-span-2 sm:col-span-1 flex gap-[16px]">
 						<img src="images/landing/check.png" alt="" class="shrink-0 self-start mt-[4px]" />
-						<p class="">Способствует здоровью сердца и сосудов: снижает уровень вредного холестерина в артериях, укрепляет внутренний слой сосудов, препятствует образованию тромбов</p>
+						<p>Способствует здоровью сердца и сосудов: снижает уровень вредного холестерина в артериях, укрепляет внутренний слой сосудов, препятствует образованию тромбов</p>
 					</div>
 					<div class="col-span-2 sm:col-span-1 flex gap-[16px]">
 						<img src="images/landing/check.png" alt="" class="shrink-0 self-start mt-[4px]" />
-						<p class="">Защищает нервные клетки от повреждений, снижает воспаление в мозге и улучшает его когнитивные функции</p>
+						<p>Защищает нервные клетки от повреждений, снижает воспаление в мозге и улучшает его когнитивные функции</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<h4 class="mb-[55px] font-gordita font-light text-[30px] sm:text-[40px]  text-[#EFBE93] text-center uppercase">Кофе натуральный жареный</h4>
+		<h3 class="mb-[55px] font-gordita font-light text-[30px] sm:text-[40px]  text-[#EFBE93] text-center uppercase">Кофе натуральный жареный</h3>
 		
 		<ProductSlider gap={50} btnOffset={-160}  btnColor="gray">
 			<div class="flex flex-col">
-				<img src="images/landing/coffee-1.png" alt="" class="max-w-[426px] mb-[30px] w-full mx-auto" />
+				<img src="images/landing/coffee-1.png" alt="Кофе Colombia Supremo" class="max-w-[426px] mb-[30px] w-full mx-auto" loading="lazy" />
 				<div class="w-full max-w-[426px] mx-auto text-center font-gordita font-normal">
 					<h4 class="mb-[30px] sm:mb-[50px] text-[30px] sm:text-[40px] uppercase leading-[1.0]">в зернах</h4>
-					<h5 class="mb-[15px] font-fira font-light text-[28px] sm:text-[40px] text-[#EFBE93] leading-[1.0] uppercase">Colombia Supremo</h5>
+					<h4 class="mb-[15px] font-fira font-light text-[28px] sm:text-[40px] text-[#EFBE93] leading-[1.0] uppercase">Colombia Supremo</h4>
 					<p class="min-h-[170px] max-w-[340px] sm:max-w-[426px] mx-auto font-light text-[16px]">Откройте для себя истинный вкус Колумбии с кофе Colombia Supremo – одним из самых узнаваемых и качественных сортов арабики в мире. Зерна, выращенные на высокогорных плантациях, впитали в себя мягкий климат, плодородную почву и чистую горную воду, что сделало их вкус по-настоящему уникальным.</p>
 				</div>
 			</div>
 			<div class="flex flex-col">
-				<img src="images/landing/coffee-2.png" alt="" class="max-w-[426px] mb-[30px] w-full mx-auto" />
+				<img src="images/landing/coffee-2.png" alt="Кофе Ethiopia Sidamo" class="max-w-[426px] mb-[30px] w-full mx-auto" loading="lazy" />
 				<div class="w-full max-w-[426px] mx-auto text-center font-gordita font-normal">
 					<h4 class="mb-[30px] sm:mb-[50px] text-[30px] sm:text-[40px] uppercase leading-[1.0]">в зернах</h4>
-					<h5 class="mb-[15px] font-fira font-light text-[28px] sm:text-[40px] text-[#EFBE93] leading-[1.0] uppercase">Ethiopia Sidamo</h5>
+					<h4 class="mb-[15px] font-fira font-light text-[28px] sm:text-[40px] text-[#EFBE93] leading-[1.0] uppercase">Ethiopia Sidamo</h4>
 					<p class="h-[170px] max-w-[340px] sm:max-w-[426px] mx-auto font-light text-[16px]">Ethiopia Sidamo — это свежий и ароматный кофе с цветочными, цитрусовыми и ягодными нотами. Натуральная обработка зерен придаёт напитку яркую кислинку и длительное фруктовое послевкусие. Идеальный выбор для ценителей изысканных вкусов.</p>
 				</div>
 			</div>
 			<div class="flex flex-col">
-				<img src="images/landing/coffee-3.png" alt="" class="max-w-[426px] mb-[30px] w-full mx-auto" />
+				<img src="images/landing/coffee-3.png" alt="Кофе Premium Blend молотый" class="max-w-[426px] mb-[30px] w-full mx-auto" loading="lazy" />
 				<div class="relative max-w-[426px] mx-auto text-center font-gordita font-normal">
 					<h4 class="mb-[30px] sm:mb-[50px] text-[30px] sm:text-[40px] uppercase leading-[1.0]">молотый</h4>
-					<span class="absolute top-[27px] sm:top-[40px] left-1/2 -translate-x-1/2 text-[#9F6833] text[17px] sm:text-[20px] uppercase whitespace-nowrap">с ресвератролом</span>
-					<h5 class="mb-[15px] font-fira font-light text-[28px] sm:text-[40px] text-[#EFBE93] leading-[1.0] uppercase">Premium Blend</h5>
+					<span class="absolute top-[27px] sm:top-[40px] left-1/2 -translate-x-1/2 text-[#9F6833] text-[17px] sm:text-[20px] uppercase whitespace-nowrap">с ресвератролом</span>
+					<h4 class="mb-[15px] font-fira font-light text-[28px] sm:text-[40px] text-[#EFBE93] leading-[1.0] uppercase">Premium Blend</h4>
 					<p class="h-[170px] max-w-[340px] sm:max-w-[426px] mx-auto font-light text-[16px]">Идеальный баланс арабики и робусты в сочетании с ресвератролом обеспечат вас зарядом бодрости и мощной антиоксидантной защитой. Универсальный помол, подходящий для большинства способов приготовления кофе</p>
 				</div>
 			</div>
@@ -292,32 +295,32 @@
 <section class="min-h-[1230px] bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('images/landing/tea-bg.png')">
 	<div class="container-landing flex flex-col items-center py-[80px] text-black">
 
-		<img src="images/landing/tea-label.png" alt="" class="h-auto mb-[40px]" />
+		<img src="images/landing/tea-label.png" alt="One Tea" class="h-auto mb-[40px]" loading="lazy" />
 		<h2 class="mb-[30px] font-gordita font-light text-[40px] sm:text-[64px] uppercase text-center leading-none">Премиальный чай <br class="block lg:hidden"><span class="font-normal">One tea</span></h2>
 		<p class="max-w-[750px] mb-[60px] font-gordita font-light text-[16px] leading-[130%] text-center">Идеальное сочетание премиальных сортов и натуральных ингредиентов для взыскательных любителей чая и ценителей тонких ароматов</p>
 
 		<ProductSlider gap={50} btnOffset={-160}  btnColor="gray">
 			<div class="flex flex-col">
-				<img src="images/landing/tea-1.png" alt="" class="max-w-[426px] mb-[30px] w-full mx-auto" />
+				<img src="images/landing/tea-1.png" alt="Чай Купаж Мальва-Клубника" class="max-w-[426px] mb-[30px] w-full mx-auto" loading="lazy" />
 				<div class="max-w-[426px] mx-auto text-center font-gordita font-light">
-					<h4 class="mb-[15px] font-fira font-normal text-[35px] sm:text-[40px] text-[#6C4016] uppercase leading-[1.0]">Премиальный чай</h4>
-					<h5 class="mb-[15px] font-light text-[18px] leading-[1.0] uppercase">Купаж «Мальва-Клубника»</h5>
+					<h3 class="mb-[15px] font-fira font-normal text-[35px] sm:text-[40px] text-[#6C4016] uppercase leading-[1.0]">Премиальный чай</h3>
+					<h4 class="mb-[15px] font-light text-[18px] leading-[1.0] uppercase">Купаж «Мальва-Клубника»</h4>
 					<p class="h-[220px] max-w-[340px] sm:max-w-[426px] mx-auto font-light text-[16px]">Изысканный купаж, объединяющий насыщенный кенийский черный чай и тонкий китайский зеленый сенча, обогащённый яркими нотами спелой клубники и тропических фруктов. Карамельная сладость цветов мальвы добавляет роскошную цветочную глубину, создавая невероятно гармоничный и многогранный вкусовой букет.</p>
 				</div>
 			</div>
 			<div class="flex flex-col">
-				<img src="images/landing/tea-2.png" alt="" class="max-w-[426px] mb-[30px] w-full mx-auto" />
+				<img src="images/landing/tea-2.png" alt="Чёрный чай элитный индийский" class="max-w-[426px] mb-[30px] w-full mx-auto" loading="lazy" />
 				<div class="max-w-[426px] mx-auto text-center font-gordita font-light">
-					<h4 class="mb-[15px] font-fira font-normal text-[35px] sm:text-[40px] text-[#6C4016] uppercase leading-[1.0]">чёрный чай</h4>
-					<h5 class="mb-[15px] font-light text-[18px] leading-[1.0] uppercase">Элитный Индийский</h5>
+					<h3 class="mb-[15px] font-fira font-normal text-[35px] sm:text-[40px] text-[#6C4016] uppercase leading-[1.0]">чёрный чай</h3>
+					<h4 class="mb-[15px] font-light text-[18px] leading-[1.0] uppercase">Элитный Индийский</h4>
 					<p class="h-[220px] max-w-[340px] sm:max-w-[426px] mx-auto font-light text-[16px]">Погрузитесь в мир изысканного вкуса с этим богатым и глубоким черным чаем, собранным на лучших плантациях Индии. Бархатистый аромат и насыщенный букет создают утонченное удовольствие, даря гармонию традиций и роскоши в каждой чашке.</p>
 				</div>
 			</div>
 			<div class="flex flex-col">
-				<img src="images/landing/tea-3.png" alt="" class="max-w-[426px] mb-[30px] w-full mx-auto" />
+				<img src="images/landing/tea-3.png" alt="Зелёный чай сенча" class="max-w-[426px] mb-[30px] w-full mx-auto" loading="lazy" />
 				<div class="max-w-[426px] mx-auto text-center font-gordita font-light">
-					<h4 class="mb-[15px] font-fira font-normal text-[35px] sm:text-[40px] text-[#6C4016] uppercase leading-[1.0]">зеленый чай сенча</h4>
-					<h5 class="mb-[15px] font-light text-[18px] leading-[1.0] uppercase">Китайский Зеленый</h5>
+					<h3 class="mb-[15px] font-fira font-normal text-[35px] sm:text-[40px] text-[#6C4016] uppercase leading-[1.0]">зеленый чай сенча</h3>
+					<h4 class="mb-[15px] font-light text-[18px] leading-[1.0] uppercase">Китайский Зеленый</h4>
 					<p class="h-[220px] max-w-[340px] sm:max-w-[426px] mx-auto font-light text-[16px]">Изящный и свежий, этот премиальный Сенча — настоящий символ японской чайной культуры. Листья отбираются тщательно, чтобы раскрыть тонкий, мягкий вкус с легкими травянистыми и цветочными нотами.</p>
 				</div>
 			</div>
@@ -328,8 +331,8 @@
 </section>
 
 <section class="min-h-[651px] bg-cover bg-no-repeat overflow-hidden [background-position:calc(50%+300px)_center] lg:bg-center" style="background-image: url('images/landing/work-bg.png')">
-	<div class="container-landing ml-[0px] md:ml-[50px] xl:ml-[0px] py-[80px] text-black">
-		<div class="max-w-[1200px] mx-auto 2xl:mx-0 2xl:max-w-none flex flex-col items-center md:items-start">
+	<div class="container-landing py-[80px] text-black">
+		<div class="max-w-[1000px] mx-auto 2xl:mx-0 2xl:max-w-none flex flex-col items-center md:items-start  md:pl-[100px] lg:pl-0">
 
 		<h2 class="mb-[40px] font-gordita font-normal text-[40px] sm:text-[56px] text-[#43220A] uppercase text-center md:text-left leading-none">Как начать работу<br><span class="font-bold text-[40px]">с ONE PRODUCT</span></h2>
 

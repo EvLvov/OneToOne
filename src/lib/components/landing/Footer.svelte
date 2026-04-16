@@ -15,8 +15,7 @@
 					<li>ОГРН: 1162468074691</li>
 				</ul>
 			</div>
-
-			<!-- Почтовый адрес -->
+			
 			<div>
 				<h3 class="mb-[32px] font-light uppercase">Почтовый адрес</h3>
 				<address class="not-italic">
@@ -25,8 +24,7 @@
 				</address>
 			</div>
 
-			<!-- Ссылки -->
-			<nav aria-label="Футер">
+			<nav aria-label="links">
 				<h3 class="mb-[32px] font-light uppercase">Ссылки</h3>
 				<ul class="text-[#3FA176] font-medium">
 					<li><a href="/#" class="hover:underline">Пользовательское соглашение</a></li>
