@@ -2,6 +2,14 @@
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
+		screens: {
+			'xs': '480px',
+			'sm': '640px',
+			'md': '768px',
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1536px',
+		},
 		extend: {
 			colors: {
 				'brand-darker': '#121733',
@@ -12,12 +20,16 @@ export default {
 				'brand-accent': '#C6DAF4',
 				'brand-gray-light': '#E9E9E9',
 				'brand-gray-dark': '#222222',
+
+				'landing-brown': '#43220A',
 			},
 			fontFamily: {
-				'title-light': ['unbounded-light', 'sans-serif'],
-				'title-medium': ['unbounded-medium', 'sans-serif'],
-				'body-light': ['gorgita-regular', 'sans-serif'],
-				'body-medium': ['gorgita-medium', 'sans-serif'],
+				'unbounded': ['Unbounded', 'sans-serif'],
+				'gordita': ['Gordita', 'sans-serif'],
+				'fira': ['FiraSans', 'sans-serif'],
+			'gogol': ['Gogol', 'sans-serif'],
+			'inter': ['Inter', 'sans-serif'],
+			'dinpro': ['DINPro', 'sans-serif'],
 			},
 			fontSize: {
 				'xs':   ['0.625rem', { lineHeight: '0.875rem' }], // 10px

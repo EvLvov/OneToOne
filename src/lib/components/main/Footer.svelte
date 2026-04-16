@@ -22,15 +22,15 @@
 						{#each links as link}
 							<a
 								href={link.href}
-								class="font-body-medium text-xs leading-6 tracking-normal text-brand-light uppercase underline decoration-solid transition-colors duration-200 hover:text-white"
+								class="font-gordita font-medium text-xs leading-6 tracking-normal text-brand-light uppercase underline decoration-solid transition-colors duration-200 hover:text-white"
 							>
 								{link.label}
 							</a>
 						{/each}
 					</nav>
 
-					<address class="font-body-light text-xs leading-relaxed text-white not-italic text-center lg:text-left">
-						<p class="font-body-medium text-white">ООО "КРИСТЕЛ"</p>
+					<address class="font-gordita font-normal text-xs leading-relaxed text-white not-italic text-center lg:text-left">
+						<p class="font-gordita font-medium text-white">ООО "КРИСТЕЛ"</p>
 						<p>ИНН: 2460096023</p>
 						<p>ОГРН: 1162468072491</p>
 						<br />
@@ -45,4 +45,4 @@
 		
 	</footer>
 </div>
-<p class="py-2 text-center font-body-light text-xs text-brand-light">Copyright ©2025</p>
+<p class="py-2 text-center font-gordita font-normal text-xs text-brand-light">Copyright ©2025</p>

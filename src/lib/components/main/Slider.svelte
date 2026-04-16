@@ -31,8 +31,8 @@
 		style="background-image: url({slides[currentIndex]?.image});"
 	>
 		<div class="absolute top-2 left-2 max-w-[310px] rounded-[15px] bg-white/80 px-6 py-7 mr-2">
-			<h3 class="mb-3 font-title-medium text-xxl">{slides[currentIndex]?.title}</h3>
-			<p class="ml-5 font-body-light text-sm">{@html slides[currentIndex]?.description}</p>
+			<h3 class="mb-3 font-unbounded font-medium text-xxl">{slides[currentIndex]?.title}</h3>
+			<p class="ml-5 font-gordita font-normal text-sm">{@html slides[currentIndex]?.description}</p>
 
 			<!-- <div class="absolute right-1 -bottom-8 -translate-x-1/2 transform">
 				<Button variant="icon" src="icons/arrow.svg" />

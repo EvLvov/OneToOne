@@ -39,7 +39,7 @@
 	<Header />
 	<div class="conteiner-custom flex flex-col items-center gap-[3.75rem] py-32 md:py-44">
 		<img src="images/main/logo.png" alt="ONE TO ONE" />
-		<h2 class="text-center font-title-light text-xl text-white">
+		<h2 class="text-center font-unbounded font-light text-xl text-white">
 			Живи для себя, создавай для других
 		</h2>
 	</div>
@@ -58,15 +58,15 @@
 				</div>
 
 				<div class="p-6 text-brand-gray-dark">
-					<h2 class="mb-3 text-xl font-title-medium lg:pl-4">Присоединяйтесь</h2>
-					<div class="font-body-light lg:pl-[5.5rem]">
+					<h2 class="mb-3 text-xl font-unbounded font-medium lg:pl-4">Присоединяйтесь</h2>
+					<div class="font-gordita font-normal lg:pl-[5.5rem]">
 						<p class="text-sm leading-relaxed">
 							Вступайте в наши социальные сети,<br> чтобы
-							<mark class="rounded bg-brand-accent p-0.5 font-body-medium"
+							<mark class="rounded bg-brand-accent p-0.5 font-gordita font-medium"
 								>быть в курсе всех событий:</mark
 							>
 						</p>
-						<p class="font-body-medium mt-2 text-sm leading-relaxed">
+						<p class="font-gordita font-medium mt-2 text-sm leading-relaxed">
 							новые франшизы, новые продукты,<br />мероприятия и многое другое!
 						</p>
 					</div>
