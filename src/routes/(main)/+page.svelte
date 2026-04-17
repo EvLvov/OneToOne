@@ -5,12 +5,12 @@
 	import Footer from '$lib/components/main/Footer.svelte';
 
 	const brands = [
-		{ image: 'images/main/dont-speak.png', alt: "Don't Speak School", href: '/landing' },
+		{ image: 'images/main/dont-speak.png', alt: "Don't Speak School", href: '#' },
 		{ image: 'images/main/align-pro.png', alt: 'Align Pro Group', href: '#' },
 		{ image: 'images/main/dr-agen.png', alt: "Dr. A'Gen", href: '#' },
-		{ image: 'images/main/one-coffee.png', alt: 'One Coffee', href: '#' },
-		{ image: 'images/main/one-product.png', alt: 'One Product', href: '#' },
-		{ image: 'images/main/one-parfum.png', alt: 'One Parfum', href: '#' },
+		{ image: 'images/main/one-coffee.png', alt: 'One Coffee', href: '/landing' },
+		{ image: 'images/main/one-product.png', alt: 'One Product', href: '/landing' },
+		{ image: 'images/main/one-parfum.png', alt: 'One Parfum', href: '/landing' },
 	];
 
 	const slides = [

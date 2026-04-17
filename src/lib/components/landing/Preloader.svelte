@@ -59,7 +59,7 @@
 </style>
 
 {#if visible}
-	<div data-preloader class="fixed inset-0 z-[9999] bg-[landing-beige] transition-opacity duration-[800ms] {hiding ? 'opacity-0' : 'opacity-100'}">
+	<div data-preloader class="fixed inset-0 z-[9999] bg-landing-beige transition-opacity duration-[800ms] {hiding ? 'opacity-0' : 'opacity-100'}">
 
 		<img
 			src="images/landing/hero-logo.png"
