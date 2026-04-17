@@ -37,7 +37,7 @@
         </div>
       </div>
 
-      <div class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-4 bg-[#e9ded9] px-4 lg:hidden transition-all duration-300 {menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}">
+      <div class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-4 bg-[landing-beige] px-4 lg:hidden transition-all duration-300 {menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}">
         <Input placeholder="ID number" bind:value={id} class="w-[250px]" />
         <Input type="password" placeholder="Password" bind:value={password} class="w-[250px]" />
         <div class="transition-all duration-300 {filled ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}">

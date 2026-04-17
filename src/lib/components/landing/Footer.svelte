@@ -1,4 +1,4 @@
-<footer class=" bg-[#222222]">
+<footer class=" bg-[brand-gray-dark]">
 	<div class="relative container-landing text-white overflow-hidden 2xl:overflow-visible">
 		<div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 font-gordita font-normal gap-[40px] pt-[80px] pb-[35px] text-[16px] max-w-[500px] mx-auto lg:max-w-none lg:mx-0 text-center xs:text-left">
 

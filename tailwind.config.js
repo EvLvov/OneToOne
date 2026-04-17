@@ -21,7 +21,12 @@ export default {
 				'brand-gray-light': '#E9E9E9',
 				'brand-gray-dark': '#222222',
 
-				'landing-brown': '#43220A',
+				'landing-brown':   '#43220A',
+				'landing-caramel': '#6C4016',
+				'landing-gold':    '#EFBE93',
+				'landing-amber':   '#9F6833',
+				'landing-dark':    '#231d1b',
+				'landing-beige':   '#e9ded9',
 			},
 			fontFamily: {
 				'unbounded': ['Unbounded', 'sans-serif'],
