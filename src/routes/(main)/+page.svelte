@@ -36,8 +36,12 @@
 </script>
 
 <div class="bg-brand-dark md:bg-[linear-gradient(to_right,theme('colors.brand-darker'),theme('colors.brand-dark'),theme('colors.brand-darker'))]">
-	<Header />
+	<div class="conteiner-custom">
+		<Header />
+	</div>
+	
 	<div class="conteiner-custom flex flex-col items-center gap-[3.75rem] py-32 md:py-44">
+		
 		<img src="images/main/logo.png" alt="ONE TO ONE" />
 		<h2 class="text-center font-unbounded font-light text-xl text-white">
 			Живи для себя, создавай для других

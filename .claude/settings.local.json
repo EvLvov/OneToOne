@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(node -e ':*)",
+      "Bash(npx prettier:*)",
+      "Bash(npx svelte-check:*)",
+      "Bash(python3)",
+      "Bash(node -e ' *)"
     ]
   }
 }

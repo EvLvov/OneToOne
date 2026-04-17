@@ -1,48 +1,63 @@
 <script lang="ts">
-  import Input from './Input.svelte';
   import Button from './Button.svelte';
 
-  let id = $state('');
-  let password = $state('');
+  let {
+    variant = 'main',
+    isAuthorized =  true,
+    loginHref = '#',
+    dashboardHref = '#',
+    logoutHref = '#'
+  }: {
+    variant?: 'main' | 'landing';
+    isAuthorized?: boolean;
+    loginHref?: string;
+    dashboardHref?: string;
+    logoutHref?: string;
+  } = $props();
+
   let menuOpen = $state(false);
 
-  let filled = $derived(id.trim() !== '' && password.trim() !== '');
+  const isLanding = $derived(variant === 'landing');
 
-  function handleSubmit() {
-    // логика отправки
-  }
+  const burgerBarColor  = $derived(isLanding ? 'bg-landing-brown' : 'bg-white');
+  const burgerMenuBg    = $derived(isLanding ? 'bg-landing-beige' : 'bg-brand-dark');
+  const btnTextColor    = $derived(isLanding ? 'text-landing-caramel' : 'text-black');
+  const desktopJustify  = $derived(isLanding ? 'lg:justify-start' : 'lg:justify-end');
+  const desktopInnerClass = $derived(isLanding ? 'w-full max-w-[849px] mx-auto 2xl:max-w-none 2xl:mx-0' : '');
 </script>
 
 <header class="relative">
-  <div class="conteiner-custom py-6">
-    <div class="flex justify-end md:justify-center items-center">
+  <div class="py-6">
+    <div class="flex justify-end {desktopJustify} items-center">
 
       <button
-        class="md:hidden relative z-[60] flex flex-col gap-1.5 p-2"
+        class="lg:hidden relative z-[60] flex flex-col gap-1.5 p-2"
         onclick={() => menuOpen = !menuOpen}
         aria-label="Меню"
       >
-        <span class="block h-0.5 w-6 bg-white transition-all duration-300" class:rotate-45={menuOpen} class:translate-y-2={menuOpen}></span>
-        <span class="block h-0.5 w-6 bg-white transition-all duration-300" class:opacity-0={menuOpen}></span>
-        <span class="block h-0.5 w-6 bg-white transition-all duration-300" class:-rotate-45={menuOpen} class:-translate-y-2={menuOpen}></span>
+        <span class="block h-0.5 w-6 {burgerBarColor} transition-all duration-300" class:rotate-45={menuOpen} class:translate-y-2={menuOpen}></span>
+        <span class="block h-0.5 w-6 {burgerBarColor} transition-all duration-300" class:opacity-0={menuOpen}></span>
+        <span class="block h-0.5 w-6 {burgerBarColor} transition-all duration-300" class:-rotate-45={menuOpen} class:-translate-y-2={menuOpen}></span>
       </button>
 
-      <div class="hidden md:flex items-center justify-center">
-        <div class="relative flex gap-4">
-          <Input placeholder="ID number" bind:value={id} size="small" />
-          <Input type="password" placeholder="Password" bind:value={password} size="small" />
-          <div class="absolute left-full ml-4 top-1/2 -translate-y-1/2 transition-all duration-300 {filled ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}">
-            <Button variant="icon" src="icons/arrow.svg" onclick={handleSubmit} />
-          </div>
-        </div>
+      <div class="hidden lg:flex items-center gap-4 {desktopInnerClass}">
+        {#if isAuthorized}
+          <Button variant="white" small label="Личный кабинет" icon="user" href={dashboardHref} class={btnTextColor} />
+          <Button variant="white" small label="Выйти" icon="logout" href={logoutHref} class={btnTextColor} />
+        {:else}
+          <Button variant="white" small label="Личный кабинет" icon="user" href={loginHref} class={btnTextColor} />
+        {/if}
       </div>
 
-      <div class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-4 bg-brand-dark px-4 md:hidden transition-all duration-300 {menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}">
-        <Input placeholder="ID number" bind:value={id} size="small" class="w-[250px]" />
-        <Input type="password" placeholder="Password" bind:value={password} size="small" class="w-[250px]" />
-        <div class="transition-all duration-300 {filled ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}">
-          <Button variant="icon" src="icons/arrow.svg" onclick={handleSubmit} />
-        </div>
+      <div class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-4 {burgerMenuBg} px-4 lg:hidden transition-all duration-300 {menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}">
+        {#if isAuthorized}
+          <div class="flex flex-col gap-4">
+            <Button variant="white" medium label="Личный кабинет" icon="user" href={dashboardHref} class={btnTextColor} />
+            <Button variant="white" medium label="Выйти" icon="logout" href={logoutHref} class="w-full {btnTextColor}" />
+          </div>
+        {:else}
+          <Button variant="white" medium label="Личный кабинет" icon="user" href={dashboardHref} class={btnTextColor} />
+        {/if}
       </div>
 
     </div>

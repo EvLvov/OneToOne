@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
+	let { onready }: { onready?: () => void } = $props();
+
 	let visible = $state(true);
 	let hiding = $state(false);
 	let dotsHiding = $state(false);
@@ -30,6 +32,7 @@
 		dotsHiding = true;
 		setTimeout(() => {
 			hiding = true;
+			onready?.();
 			setTimeout(() => { visible = false; }, 600);
 		}, 400);
 	}

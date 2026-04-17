@@ -1,21 +1,23 @@
 <script lang="ts">
-	import Header from '$lib/components/landing/Header.svelte';
-	import Button from '$lib/components/landing/Button.svelte';
+	import Header from '$lib/components/main/Header.svelte';
+	import Button from '$lib/components/main/Button.svelte';
 	import ProductSlider from '$lib/components/landing/ProductSlider.svelte';
 	import Footer from '$lib/components/landing/Footer.svelte';
 	import Preloader from '$lib/components/landing/Preloader.svelte';
+
+	let heroReady = $state(false);
 </script>
 
-<Preloader />
+<Preloader onready={() => heroReady = true} />
 
 <section class="lg:h-[700px] bg-cover bg-no-repeat [background-position:calc(50%+300px)_center] lg:bg-left" style="background-image: url('images/landing/hero-bg.jpg')">
 	<div class="container-landing">
-		<Header />
+		<Header variant="landing" />
 		<div class="py-[100px] pt-[50px] lg:py-[60px] max-w-[849px] mx-auto 2xl:mx-0 2xl:max-w-none">
 			<img class="mb-[60px]" src="images/landing/hero-logo.png" alt="logo" />
-			<h1 class="font-gordita font-normal text-[40px] uppercase text-landing-brown leading-[1.1]">Это стиль жизни,</h1>
-			<p class="mb-[45px] font-fira font-light text-[24px] uppercase text-landing-brown leading-[1.1]">упакованный в красивый и качественный продукт</p>
-			<Button label="Присоединиться" href="#" />
+			<h1 class="mb-[6px] font-gordita font-normal text-[40px] uppercase text-landing-brown leading-[1.1] opacity-0 {heroReady ? 'animate-slide-in-left' : ''}">Это стиль жизни,</h1>
+			<p class="mb-[45px] font-fira font-light text-[24px] uppercase text-landing-brown leading-[1.1] opacity-0 {heroReady ? 'animate-slide-in-left' : ''}" style="animation-delay:300ms">упакованный в красивый и качественный продукт</p>
+			<div class="opacity-0 {heroReady ? 'animate-slide-in-left' : ''}" style="animation-delay:600ms"><Button label="Присоединиться" href="#" /></div>
 		</div>
 	</div>
 </section>
@@ -358,11 +360,12 @@
 			</li>
 		</ul>
 
-		<Button variant="brown" label="Зарегистрироваться" href="#" radius={10} />
+		<Button variant="brown" label="Зарегистрироваться" href="#" />
 
 		</div>
 	</div>
 </section>
 
 <Footer />
+
 
