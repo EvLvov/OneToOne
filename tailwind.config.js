@@ -32,30 +32,9 @@ export default {
 				'unbounded': ['Unbounded', 'sans-serif'],
 				'gordita': ['Gordita', 'sans-serif'],
 				'fira': ['FiraSans', 'sans-serif'],
-			'gogol': ['Gogol', 'sans-serif'],
-			'inter': ['Inter', 'sans-serif'],
-			'dinpro': ['DINPro', 'sans-serif'],
-			},
-			keyframes: {
-				'slide-in-left': {
-					'from': { opacity: '0', transform: 'translateX(-24px)' },
-					'to':   { opacity: '1', transform: 'translateX(0)' },
-				},
-				'slide-in-bottom': {
-					'from': { opacity: '0', transform: 'translateY(24px)' },
-					'to':   { opacity: '1', transform: 'translateY(0)' },
-				},
-				'slide-in-right': {
-					'from': { opacity: '0', transform: 'translateX(24px)' },
-					'to':   { opacity: '1', transform: 'translateX(0)' },
-				},
-			},
-			animation: {
-				'slide-in-left':        'slide-in-left   0.9s  cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
-				'slide-in-bottom':      'slide-in-bottom 0.9s  cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
-				'slide-in-left-fast':   'slide-in-left   0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
-				'slide-in-bottom-fast': 'slide-in-bottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
-				'slide-in-right-fast':  'slide-in-right  0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+				'gogol': ['Gogol', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
+				'dinpro': ['DINPro', 'sans-serif'],
 			},
 			fontSize: {
 				'xs':   ['0.625rem', { lineHeight: '0.875rem' }], // 10px

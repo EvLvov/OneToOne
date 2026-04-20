@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Header from '$lib/components/main/Header.svelte';
-	import Slider from '$lib/components/main/Slider.svelte';
-	import Card from '$lib/components/main/Card.svelte';
-	import Footer from '$lib/components/main/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Slider from '$lib/components/Slider.svelte';
+	import Card from '$lib/components/Card.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	const brands = [
 		{ image: 'images/main/dont-speak.png', alt: "Don't Speak School", href: '#' },
