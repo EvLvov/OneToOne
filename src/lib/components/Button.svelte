@@ -4,6 +4,9 @@
 	let {
 		label = 'Button',
 		variant = 'white',
+		bg = '',
+		color = '',
+		uppercase = false,
 		small = false,
 		medium = false,
 		href,
@@ -15,10 +18,14 @@
 		iconWidth = '1em',
 		iconHeight = '1em',
 		iconColor = 'currentColor',
-		iconOpacity = 1
+		iconOpacity = 1,
+		hoverClass = 'hover:shadow-lg hover:opacity-80'
 	}: {
 		label?: string;
 		variant?: 'white' | 'brown' | 'icon' | 'text';
+		bg?: string;
+		color?: string;
+		uppercase?: boolean;
 		small?: boolean;
 		medium?: boolean;
 		href?: string;
@@ -31,6 +38,7 @@
 		iconHeight?: string | number;
 		iconColor?: string;
 		iconOpacity?: number;
+		hoverClass?: string;
 	} = $props();
 
 	const handleClick = () => { if (href) window.location.href = href; else onclick?.(); };
@@ -40,6 +48,8 @@
 		brown: 'bg-landing-brown text-white',
 		text:  'bg-brand-light text-black',
 	};
+
+	const colorClass = $derived(bg || color ? `${bg} ${color}` : variantClass[variant]);
 
 	const sizeClass = $derived(small
 		? 'px-[14px] py-[9px] text-[11px] leading-[1]'
@@ -59,7 +69,7 @@
 {:else if href}
 	<a
 		{href}
-		class="inline-flex items-center justify-center rounded-[90px] uppercase font-gordita whitespace-nowrap transition-all duration-300 hover:shadow-lg hover:opacity-80 {variantClass[variant]} {sizeClass} {extraClass}"
+		class="inline-flex items-center justify-center rounded-[90px] font-gordita whitespace-nowrap transition-all duration-300 {hoverClass} {uppercase ? 'uppercase' : ''} {colorClass} {sizeClass} {extraClass}"
 	>
 		{#if icon}<span class="mr-[8px] inline-flex"><Icon name={icon} width={iconWidth} height={iconHeight} color={iconColor} opacity={iconOpacity} /></span>{/if}
 		{label}
@@ -67,7 +77,7 @@
 {:else}
 	<button
 		onclick={handleClick}
-		class="inline-flex items-center justify-center rounded-[90px] uppercase font-gordita whitespace-nowrap transition-all duration-300 hover:shadow-lg hover:opacity-80 {variantClass[variant]} {sizeClass} {extraClass}"
+		class="inline-flex items-center justify-center rounded-[90px] font-gordita whitespace-nowrap transition-all duration-300 {hoverClass} {uppercase ? 'uppercase' : ''} {colorClass} {sizeClass} {extraClass}"
 	>
 		{#if icon}<span class="mr-[8px] inline-flex"><Icon name={icon} width={iconWidth} height={iconHeight} color={iconColor} opacity={iconOpacity} /></span>{/if}
 		{label}

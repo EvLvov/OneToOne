@@ -28,7 +28,7 @@
 			<img class="mb-[60px]" src="images/landing/hero-logo.webp" alt="logo" />
 			<h1 bind:this={heading} class="opacity-0 mb-[6px] font-gordita font-normal text-[40px] uppercase text-landing-brown leading-[1.1]">Это стиль жизни,</h1>
 			<p bind:this={subheading} class="opacity-0 mb-[45px] font-fira font-light text-[24px] uppercase text-landing-brown leading-[1.1]">упакованный в красивый и качественный продукт</p>
-			<div bind:this={cta} class="opacity-0"><Button label="Присоединиться" href="#" /></div>
+			<div bind:this={cta} class="opacity-0"><Button label="Присоединиться" href="#" uppercase /></div>
 		</div>
 	</div>
 </section>
@@ -205,7 +205,7 @@
 				</ProductSlider>	
 			</div>
 			<p use:reveal class="max-w-[700px] xl:max-w-[1300px] mb-[60px] font-gogol text-[35px] sm:text-[40px] text-center text-black leading-[1.1]">Создайте атмосферу, в которую хочется возвращаться снова и снова</p>
-			<div use:reveal><Button variant="brown" label="Попробовать" href="#" /></div>
+			<div use:reveal><Button variant="brown" label="Попробовать" href="#" uppercase /></div>
 	</div>
 </section>
 
@@ -302,7 +302,7 @@
 		</div>
 
 		<div use:reveal>
-			<Button variant="white" label="Попробовать" href="#" />
+			<Button variant="white" label="Попробовать" href="#" uppercase />
 		</div>
 		
 
@@ -380,7 +380,7 @@
 			</ul>
 
 			<div use:reveal>
-				<Button variant="brown" label="Зарегистрироваться" href="#" />
+				<Button variant="brown" label="Зарегистрироваться" href="#" uppercase />
 			</div>
 			
 		</div>
